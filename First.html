@@ -5,23 +5,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sushil</title>
+
 </head>
 
 <body>
+
     <fieldset>
-        <legend align="center">Form</legend>
-        <form action="sushil.com" method="GET" onsubmit="return true">
-            <label for="First Name">First Name : </label>
-            <input name="fnm" size="40" required placeholder="Enter Name " required maxlength="6"  />
-            <label for="Last Name">Last Name :</label>
-            <input name="fnm" size="40" required placeholder="Enter Last Name " required />
-            <label for="Password">Password :</label>
-            <input name="fnm" size="40"  required placeholder="Enter Password " required />
-   
+        <fieldset>
+            <legend align="center">Form</legend>
+
+            <form action="82frm_post.html" onsubmit="return true">
+
+                <label for="enterfirst name">First Name:</label>
+
+                <input name="frm" size="40" placeholder="enter name" required />
+
+                <label>Last Name: </label>
+
+                <input name="1nm" maxlength="15" pattern='[a-zA-Z]{8,15}' title="pl eneter minimum 8 char" />
+
+                <label>Password:</label><input type="password" name="Im" maxlength=" 3" />
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Sex : </label>
+            <label>Male</label>
+            <input type="radio" name="mf" value="M" />
+            <!-- IN NAME="MF" MUST BE SAME OTHERWISE WE HAVE TO CHECK BOTH RADIO BUTTON-->
+            <label>Female</label>
+            <input type="radio" name="mf" value="F" checked />
+            <!-- USING CHECKED BY DEFAULT IT WILL SELECT  THE FEMALE-->
+
+        </fieldset>
+        <br>
+        <fieldset>
+            <label>Hobbies : </label>
+            <input type="checkbox" name="check1" value="sport" checked="checked" /> <!-- checkbox created-->
+            <label>Sport</label>
+            <input type="checkbox" name="check2" value="dance" /> <!-- checkbox created-->
+            <label>Dance</label>
+            <input type="checkbox" name="check3" value="music" /> <!-- checkbox created-->
+            <label>Music</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <select name="s1"> <!-- dropdown created  <select name="dsp[]" multiple="multiple"> -->
+                <option value="-1">select</option>
+                <option value="2">BE</option>
+                <option value="3">Bsc</option>
+                <option value="4">MSCIT</option>
+            </select>
+
+            <select name="dsp[]" multiple="multiple"> <!-- dropdown created  MULTIPLE select in dropdown-->
+                <option value="-4">select</option>
+                <option value="7">BE</option>
+                <option value="9">Bsc</option>
+                <option value="5">MSCIT</option>
+            </select>
+        </fieldset>
+        <br>
+
+        <br />
+        <fieldset enctype="multipart/form-data" action="a.php" method="post">
+            <!--To upload file you have to set enctype="multipart/form-data" and method has to be POST.        -->
+            <input type="file" name="f" />
+
+        </fieldset>
+        <!--html5 new Fetures-->
+        <br>
+        <fieldset>
+            <form autocomplete="on"></form>
+            First name:<input type="text" name="fname" placeholder="enter first name" autofocus autocomplete required
+                minlength="3" maxlength="10" /> <br />
+            E-mail: <input type="email" name="email" placeholder="enter E-mail" autofocus="off" /> <br />
+
+            Date :<input type="date" name="dt" /><br />
+
+            number:<input type="number" name="nm" min-5 max-50 step-3 autofocus="autofocus" /><br />
+
+            Time : <input type="time" name="time" /><br />
+
+            Month : <input type="month" name="mon" /><br />
+
+            week :<input type="week" name="week" /><br />
+
+            url : <input type="url" name="path" /><br />
+            tel : <input type="tel" name="tel" /><br />
+            range:<input type="range" name="points" min="1" max="10">
+            Search Google: <input type="search" name="googlesearch">
+            color:<input type="color" name="col">
+            <input type="submit" formnovalidate="formnovalidate" formaction="datalist.html" formmethod="post"
+                formtarget="_blank">
+
+        </fieldset>
+        <br />
+        <fieldset>
+            <form oninput="r.value=b.valueAsNumber">
+                <input type="range" name="b" min="300" max="3000">
+                <output name="r"></output>
+            </form>
+            <p><meter value="3" min="0" max="5">???</meter></p>
+            <p><progress value="5" min="0" max="5">???</progress></p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <form action="demo_form.asp" method="get">
+                <!-- value of list and id has to be same-->
+                Select Browser
+                <input list="brow" name="br" />
+                <datalis id="brow">
+                    <option value="Internet Explorer">
+                    <option value="firefox">
+                    <option value="chrome">
+                    <option value="opera">
+                    <option value="Safari">
+                    <option value="netscape">
+                </datalis>
+                <input type="submit" />
+            </form>
+        </fieldset>
+            <br>
+        <fieldset>
+
+            <label>Comment</label>
+            <br>
+            <textarea rows="5" cols="200" name="cmt">enter address</textarea> <!-- created comment section-->
+
+
+        </fieldset>
+
+        <button>go to server</button>
+
         <input type="submit" />
-        <input type="button" value="done" />
+
+        <input type="button" value="Done" />
+
         <input type="reset" />
+
+
+        </form>
+
     </fieldset>
+
 
 
 </html>
